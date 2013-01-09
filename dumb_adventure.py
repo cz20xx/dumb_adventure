@@ -1,15 +1,12 @@
 from sys import exit
 
-#TESTING NEW GITHUB LOC LOC LOC LOC LOC
-
+# ADDING STUFF SO IT'S ON GIT
 
 # LISTS N' SHIT LIKE YOUR INVENTORY I GUESS
 def check_pockets():
-	inventory = ['a knife', 'whiskey', 'an iphone', 'two coffee creamers']
+	inventory = ['a knife', 'some string', 'a towel', 'a slim jim', 'whiskey', 'an iphone', 'some cocaine', 'a can of easy cheese', 'two coffee creamers']
 	for stuff in inventory:
 		print "You've got: %s" % stuff 
-	
-
 
 # BEGINNING OF THE GAME, FOOL
 def start(why):
@@ -27,32 +24,32 @@ def start(why):
 		print "Looks like a bedroom, a kitchen and the front door"
 		print "are place you could go.  But idk w/e."
 		living_room()
-	elif "pockets" or "inventory" in next:
-		check_pockets()
 	elif "exit" in next:
 		print "Thanks for playing, jerk!"
 		exit(0)	
 	else:
-		start("Let's try this one more time")
+		start("Let's try this one more time.")
 
 def living_room():
 	
-	next = raw_input("> ")
+	
+	next = str(raw_input("> "))
 		
 	if "bedroom" in next:
 		print "it's locked"
 		living_room()
-	elif "kitchen" in next:
-		kitchen()
-	elif "front" or "exit" in house:
-		front_door()
 	else:
-		dead("for no good reason, you kick the bucket.")
-
+		print "Looks like a bedroom, a kitchen and the front door"
+		print "are place you could go.  But idk w/e."
+		living_room()
+		
 def kitchen():
 	
 	next = raw_input("> ")
 
+def front_door():
+	
+	next = raw_input("> ")
 
 def dead(why):
 	print why, "Good job!"
